@@ -23,7 +23,6 @@ export class PostEffects {
       ofType(loadPosts),
       withLatestFrom(this.store.select(selectPostState)),
       mergeMap(([action, state]) => {
-        // Check if there are posts already
         if (state.posts.length > 0) {
           return of(loadPostsSuccess({ posts: state.posts }));
         }

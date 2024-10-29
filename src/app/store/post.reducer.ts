@@ -16,13 +16,10 @@ const postReducer = createReducer(
   initialState,
   on(loadPostsSuccess, (state, { posts }) => ({ ...state, posts })),
   on(addPost, (state, { post }) => {
-    // Find the maximum ID in the existing posts
     const maxId = state.posts.reduce((max, p) => Math.max(max, p.id), 0);
 
-    // Create a new post with the incremented ID
     const newPost = { ...post, id: maxId + 1 } as Post;
 
-    // Add the new post to the posts array
     return { ...state, posts: [...state.posts, newPost] };
   }),
 );

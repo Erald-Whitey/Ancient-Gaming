@@ -17,5 +17,5 @@ export const selectPostById = (id: number) =>
   createSelector(selectPostState, (postState: PostState) =>
     postState.posts.find(post => {
       return Number(post.id) === id;
-    }) || null // Return the post or null if not found
+    }) || null
   );
