@@ -22,10 +22,10 @@ import {RouterLink} from '@angular/router';
               <td class=" w-1/12 px-4 py-2 font-medium text-gray-900">{{ el.id }}</td>
               <td class=" w-1/4 px-4 py-2 text-gray-700">{{ el.title }}</td>
               <td class=" w-1/2 px-4 py-2 text-gray-700">{{ el.body }}</td>
-              <td class="flex items-center justify-center w-1/12 px-4 py-2">
+              <td class="w-1/12 px-4 py-2">
                 <a
                   [routerLink]="['/posts/view', el.id]"
-                  class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                  class="flex items-center justify-center rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                 >
                   View
                 </a>
